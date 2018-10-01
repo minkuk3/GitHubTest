@@ -20,7 +20,7 @@ public class PrintStarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_print_star);
         getSupportActionBar().setTitle("별찍기");
         init();
-
+////
         /*ActionBar ab = getSupportActionBar();
         ab.setTitle("aaaa");*/
     }
