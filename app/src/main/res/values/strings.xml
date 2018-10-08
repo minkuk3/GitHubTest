@@ -1,9 +1,16 @@
 <resources>
     <string name="app_name">Hello</string>
     <string name="hello">안녕하세요! 한국it 교육원입니다</string>
-    <string name="myname">박민국입니다</string>
+    <string name="myname">박민국</string>
     <string name="change">체인지</string>
-    <string name="title_activity_two">TwoActivity</string>
+    <string name="title_activity_Three">TwoActivity</string>
+    <string name="title_activity_two">플레이어</string>
 
+    <string name="first_mp">my_mister</string>
+    <string name="two_mp">so_sick</string>
+
+    <string name="start">재생</string>
+    <string name="change_start">일시정지</string>
+    <string name="stop">정지</string>
 
 </resources>

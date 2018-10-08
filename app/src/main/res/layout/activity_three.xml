@@ -24,7 +24,9 @@
 
                 <EditText
                     android:id="@+id/et_no1"
-                    style="@style/OA_top_ratio" />
+                    style="@style/OA_top_ratio"
+                    android:maxLength="4"
+                    android:hint="숫자4개"/>
 
                 <TextView
                     android:id="@+id/tv_no1"
@@ -34,7 +36,9 @@
 
                 <EditText
                     android:id="@+id/et_no2"
-                    style="@style/OA_top_ratio" />
+                    style="@style/OA_top_ratio"
+                    android:maxLength="4"
+                    android:hint="숫자4개"/>
 
                 <TextView
                     android:id="@+id/tv_no2"
@@ -46,7 +50,8 @@
                 <TextView
                     android:id="@+id/tv_no3"
                     style="@style/OA_top_ratio"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:maxLength="10"/>
             </LinearLayout>
 
             <LinearLayout
@@ -57,7 +62,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -123,6 +129,7 @@
                             android:text="0" />
 
                         <Button
+                            android:onClick="clkResult"
                             style="@style/OA_bottom_layout_btn"
                             android:layout_weight="2"
                             android:text="=" />

@@ -29,6 +29,7 @@ public class ThreeActivity extends AppCompatActivity {
     }
 
     private void init() {
+
         getSupportActionBar().setTitle("계산기");
 
         et_no1 = findViewById(R.id.et_no1);
@@ -57,11 +58,74 @@ public class ThreeActivity extends AppCompatActivity {
             } else {
                 tv_no1.setText(str);
             }
+        }
+    }
+
+    public void clknum(View v) {
+        if (v instanceof Button) {
+            Button b = (Button) v;
+            String str = b.getText().toString();
+
+            /*et_no1.setText(et_no1.getText().toString() + str);
+            et_no2.setText(et_no2.getText().toString() + str);*/
+
+            if (tv_no1.getText().toString().getBytes().length > 0 ) {
+                if(!(tv_no3.getText().toString().getBytes().length > 0 )){
+                    et_no2.setText(et_no2.getText().toString() + str);
+                }
+            } else {
+                et_no1.setText(et_no1.getText().toString() + str);
+            }
+        }
+    }
+
+    public void clkResult(View v) {
+
+        if (v instanceof Button) {
+            Button b = (Button) v;
+
+            int num1;
+            int num2;
+
+            String str2;
+
+            String str = et_no1.getText().toString();
+            if (str.getBytes().length > 0) {
+                num1 = Integer.parseInt(str);
+            } else {
+                num1 = -1;
+            }
+
+            String str1 = et_no2.getText().toString();
+            if (str1.getBytes().length > 0) {
+                num2 = Integer.parseInt(str1);
+            } else {
+                num2 = -1;
+            }
+
+            str2 = tv_no1.getText().toString();
+
+            if ((num1 == -1) || (num2 == -1)) {
+                tv_no3.setText("값이 없음");
+            } else {
+                if (str2.equals("/")) {
+                    if ((num1 == 0) || (num2 == 0)) {
+                        tv_no3.setText("div0");
+                    } else {
+                        tv_no3.setText((num1 / (double) num2) + "");
+                    }
+                } else if (str2.equals("*")) {
+                    tv_no3.setText((num1 * num2) + "");
+                } else if (str2.equals("-")) {
+                    tv_no3.setText((num1 - num2) + "");
+                } else if (str2.equals("+")) {
+                    tv_no3.setText((num1 + num2) + "");
+                }
+            }
+
+
 
 
         }
-
     }
-
-
 }
